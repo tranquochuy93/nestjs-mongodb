@@ -4,7 +4,6 @@ ADD package*.json ./
 RUN npm install
 ADD . .
 RUN npm run build
-RUN npm run copy:assets
 
 FROM node:20-alpine as production
 WORKDIR /usr/src/app
